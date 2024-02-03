@@ -18,8 +18,9 @@ So if you are used to having real-time dashboards using SQL, with tools like Met
 
 You can then actually plot the trendline retention curve and also calculate the expected lifetime of your users with the equation, all using your real-time data. No need to download it anymore.
 
-Here's an illustrative example of what the trendline looks like when running with the example data provided in the SQL query (generated in Metabase)
-<img width="1252" alt="image" src="https://github.com/bnovarini/sql-analyses/assets/49925472/3283d470-f363-43d7-98d3-ad8d15d11955">
+Here's an illustrative example of what the trendline looks like when running with the example data provided in the SQL query (generated in Metabase).
+
+<img width="600" alt="image" src="https://github.com/bnovarini/sql-analyses/assets/49925472/f58162d0-8b7f-4d83-9e15-091aa5af5f8d">
 
 
 ## License
