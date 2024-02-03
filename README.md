@@ -7,7 +7,7 @@ Data-driven decision-making requires trusting how to the analyses are performed.
 
 ## Context for analyses in the repo
 
-##### **[retention-curve-regression][regression-sql]** (Standard SQL)
+#### **[retention-curve-regression][regression-sql]** (Standard SQL)
 _If you were to summarize your retention cohort analyses in one curve, how would you go about it? Do you have early indications that your retention curves are stabilizing?_
 
 I've always felt that using a weighted average of each month was a weird approach. You end up overindexing later months with fewer datapoints. For instance, if M12 only has one datapoint, I feel wrong saying that my expected M12 retention of other cohorts is that value. It also doesn't help you get any idea on how to extrapolate for future months.
