@@ -22,7 +22,7 @@ So if you are used to having real-time dashboards using SQL, with tools like Met
 
 You can then actually plot the trendline retention curve and also calculate the expected lifetime of your users with the equation, all using your real-time data. No need to download it anymore.
 
-Here's an illustrative example of what the trendline looks like when running with the example data provided in the SQL query (generated in Metabase).
+Here's an illustrative example of what the trendline looks like when running with some [sample data][sample-retention-data] from Profitwell (chart generated in Metabase).
 
 <img width="600" alt="image" src="https://github.com/bnovarini/sql-analyses/assets/49925472/f58162d0-8b7f-4d83-9e15-091aa5af5f8d">
 
@@ -37,3 +37,4 @@ MIT
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
    [regression-sql]:https://github.com/bnovarini/sql-analyses/blob/main/retention-curve-regression.sql
+   [sample-retention-data]:https://demo.profitwell.com/app/trends/cohorts
