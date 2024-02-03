@@ -26,6 +26,7 @@ Here's an illustrative example of what the trendline looks like when running wit
 
 <img width="600" alt="image" src="https://github.com/bnovarini/sql-analyses/assets/49925472/f58162d0-8b7f-4d83-9e15-091aa5af5f8d">
 
+#### **More analyses to be shared soon**
 
 ## License
 
