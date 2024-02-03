@@ -1,5 +1,5 @@
 -- Using 12-month data from https://demo.profitwell.com/app/trends/cohorts and with minor adjustments to m9+ data for educational purpose
--- When using your data, make sure to summarize it just 3 columns: cohort, age, revenue (as percent of age 0 revenue)
+-- When using your data, make sure to summarize it with just 3 columns in the data temp table: cohort, age, revenue (as percent of age 0 revenue)
 -- Adapted algorithm from page 17 in https://www.scribd.com/doc/14674814/Regressions-et-equations-integrales
 
 WITH data AS (
