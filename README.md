@@ -16,7 +16,7 @@ Fitting an exponential curve feels more appropriate (`y = a + b*exp(c*age)`). Th
 
 So if you are used to having real-time dashboards using SQL, with tools like Metabase or Looker, this SQL query adapts the non-linear regression algorithm to fit that exponential curve to a SQL environment. So every time there's new data, the regression is recalculated automatically.
 
-You can then actually plot the trendline retention curve and also calculate the expected lifetime of your users with the equation.
+You can then actually plot the trendline retention curve and also calculate the expected lifetime of your users with the equation, all using your real-time data. No need to download it anymore.
 
 ## License
 
