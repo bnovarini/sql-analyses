@@ -3,7 +3,11 @@ Sharing curious SQL analyses and algorithms I've built that could help folks out
 
 ## Context
 
-Data-driven decision-making requires trusting how to the analyses are performed. While there are many tools that have pre-built calculations, I've decided to start sharing some SQL queries I've built that have helped me gain control of the process.
+Data-driven decision-making requires trusting how to the analyses are performed. While there are many tools that have pre-built calculations from platforms like Stripe:
+1. If you have multiple revenue streams that don't pass through that platform, you won't be able to take them into account
+2. You depend on the black box on how they run their calculations
+
+I've decided to start sharing some SQL queries I've built that have helped me gain control of the process.
 
 ## Context for analyses in the repo
 
