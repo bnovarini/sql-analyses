@@ -3,7 +3,7 @@ Sharing curious SQL analyses and algorithms I've built that could help folks out
 
 ## Context
 
-Data-driven decision-making requires trusting how to the analyses are performed. While there are many tools that have pre-built calculations from platforms like Stripe:
+Data-driven decision-making requires trusting how to the analyses are performed. While there are many tools that have pre-built calculations from platforms, like Stripe for retention:
 1. If you have multiple revenue streams that don't pass through that platform, you won't be able to take them into account
 2. You depend on the black box on how they run their calculations
 
