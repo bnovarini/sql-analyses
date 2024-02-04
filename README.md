@@ -11,6 +11,9 @@ I've decided to start sharing some SQL queries I've built that have helped me ga
 
 ## Context for analyses in the repo
 
+#### **[rolling-windows][rolling-windows]** (Standard SQL)
+There are always ways to use window functions, but here's another approach to do rolling window analyses (30-day rolling, 7-day rolling, etc.)
+
 #### **[cohort-retention-analysis][cohort-retention-analysis]** (Standard SQL)
 Assuming you already track your user revenue (or any activity) with [Metabase][metabase] or and equivalent tool, this script helps you display the data in the format of a retention chart or table.
 
@@ -43,3 +46,4 @@ MIT
    [sample-retention-data]:https://demo.profitwell.com/app/trends/cohorts
    [cohort-retention-analysis]:https://github.com/bnovarini/sql-analyses/blob/main/cohort-retention-analysis.sql
    [metabase]:https://www.metabase.com/
+   [rolling-windows]:https://github.com/bnovarini/sql-analyses/blob/main/rolling-windows.sql
