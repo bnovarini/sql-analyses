@@ -1,5 +1,5 @@
-# sql-analyses
-Sharing curious SQL analyses and algorithms I've built that could help folks out
+# Compilation of helpful SQL scripts
+Sharing curious SQL scripts and algorithms I've built that could speed up data analysis for founders and data folks, especially those working with SaaS
 
 ## Context
 
