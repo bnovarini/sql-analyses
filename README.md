@@ -12,7 +12,7 @@ I've decided to start sharing some SQL queries I've built that have helped me ga
 ## Context for analyses in the repo
 
 #### **[cohort-retention-analysis][cohort-retention-analysis]** (Standard SQL)
-Assuming you already track your user revenue (or any activity) with Metabase or equivalent tool, this script helps you display the data in the format of a retention chart or table.
+Assuming you already track your user revenue (or any activity) with Metabase or and equivalent tool, this script helps you display the data in the format of a retention chart or table.
 
 _If you use Postgres, I'd not recommend trying to pivot the table like is shown in the end, because there is no shortcut like there is in Standard SQL_
 
