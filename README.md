@@ -3,8 +3,8 @@ Sharing curious SQL scripts and algorithms I've built that could speed up data a
 
 ## Context
 
-Data-driven decision-making requires trusting how the analyses are performed. While there are many tools that have pre-built calculations from platforms, like Stripe for retention:
-1. If you have relevant data (e.g., multiple revenue streams) that don't pass through that platform, you won't be able to take them into account
+Data-driven decision-making requires trusting how the analyses are performed. While there are many platforms that have pre-built calculations, like Stripe, Firebase, Amplitude, and many others:
+1. If you have relevant data that don't pass through that platform (e.g., multiple revenue streams, backend events you don't track via Firebase, etc), you won't be able to take them into account
 2. You depend on the black box on how they run their calculations
 
 I've decided to start sharing some SQL queries I've built that have helped me gain control of the process.
