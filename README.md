@@ -21,9 +21,9 @@ _If you were to summarize your retention cohort analyses in one curve, how would
 
 Doing a weighted average always felt wrong to me. If you only had one cohort with M12 data, would you confidently average that one datapoint and say that was your expected M12 data for all cohorts? It also doesn't help you on finding a methodology to extrapolate for future months.
 
-Fitting an exponential curve feels more appropriate ($`y = a + b*e^(c*age)`$). In fact, that's exactly what retention should feel like: a geometric progression with a certain hidden coefficient `q` that is multiplied again and again and again, usually `q < 1`. There are Python libraries to do this easily, but for those of us who like our analyses always fresh, like refreshing a dashboard on Metabase, that Python or R lib doesn't do the job.
+Fitting an exponential curve feels more appropriate ($`y = a + b e^{cx}`$). In fact, that's exactly what retention should feel like: a geometric progression with a certain hidden coefficient `q` that is multiplied again and again and again, usually `q < 1`, and that hopefully that doesn't go to zero. 
 
-So if you are used to having real-time dashboards using SQL, with tools like Metabase or Looker, this SQL query adapts the non-linear regression algorithm to fit the exponential curve $`y = a + b*e^(c*age)`$. Every time there's new data, the regression is recalculated automatically by just refreshing your dashboard.
+There are Python libraries to do this easily, but for those of us who like our analyses always fresh (e.g., refreshing a dashboard on Metabase) those libs don't do the job. So if you are used to having real-time dashboards using SQL, with tools like Metabase or Looker, this SQL query adapts the non-linear regression algorithm to fit the exponential curve $`y = a + b e^{cx}`$. Every time there's new data, the regression is recalculated automatically by just refreshing your dashboard.
 
 Here's an image of what the trendline looks like when running with some [sample data][sample-retention-data] from Profitwell (chart generated in Metabase).
 
