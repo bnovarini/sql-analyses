@@ -19,15 +19,13 @@ _If you use Postgres, I'd not recommend trying to pivot the table like is shown 
 #### **[retention-curve-regression][regression-sql]** (Standard SQL)
 _If you were to summarize your retention cohort analyses in one curve, how would you go about it? Do you have early indications that your retention curves are stabilizing?_
 
-I've always felt that using a weighted average of each month was a weird approach. You end up overindexing later months with fewer datapoints. For instance, if M12 only has one datapoint, I feel wrong saying that my expected M12 retention of other cohorts is that value. It also doesn't help you get any idea on how to extrapolate for future months.
+Doing a weighted average always felt wrong to me. If you only had one cohort with M12 data, would you confidently average that one datapoint and say that was your expected M12 data for all cohorts? It also doesn't help you on finding a methodology to extrapolate for future months.
 
-Fitting an exponential curve feels more appropriate (`y = a + b*exp(c*age)`). There are Python libraries to do this easily, but I didn't want this analysis to be static, downloading the data every time I wanted to run the analysis. 
+Fitting an exponential curve feels more appropriate (`y = a + b*exp(c*age)`). In fact, that's exactly what retention should feel like: a geometric progression with a certain hidden coefficient `a` that is multiplied again and again and again. There are Python libraries to do this easily, but for those of us who like our analyses always fresh, like refreshing a dashboard on Metabase, that Python or R lib doesn't do the job.
 
-So if you are used to having real-time dashboards using SQL, with tools like Metabase or Looker, this SQL query adapts the non-linear regression algorithm to fit that exponential curve to a SQL environment. So every time there's new data, the regression is recalculated automatically.
+So if you are used to having real-time dashboards using SQL, with tools like Metabase or Looker, this SQL query adapts the non-linear regression algorithm to fit the exponential curve `y = a + b*exp(c*age)`. Every time there's new data, the regression is recalculated automatically by just refreshing your dashboard.
 
-You can then actually plot the trendline retention curve and also calculate the expected lifetime of your users with the equation, all using your real-time data. No need to download it anymore.
-
-Here's an illustrative example of what the trendline looks like when running with some [sample data][sample-retention-data] from Profitwell (chart generated in Metabase).
+Here's an image of what the trendline looks like when running with some [sample data][sample-retention-data] from Profitwell (chart generated in Metabase).
 
 <img width="600" alt="image" src="https://github.com/bnovarini/sql-analyses/assets/49925472/f58162d0-8b7f-4d83-9e15-091aa5af5f8d">
 
