@@ -11,6 +11,10 @@ I've decided to start sharing some SQL queries I've built that have helped me ga
 
 ## Context for analyses in the repo
 
+#### **[pareto][pareto-analysis]** (Standard SQL)
+Create a visual pareto chart of the data, helpful when trying to communicate with stakeholders.
+You can always use approx_quantiles (Standard SQL) or percentile_disc (POSTGRES) to get specific values, but a chart can convey more information in one look (e.g., how fast does the curve increase, when does it reach a saturation point, etc.)
+
 #### **[rolling-windows][rolling-windows]** (Standard SQL)
 There are always ways to use window functions, but here's another approach to do rolling window analyses (30-day rolling, 7-day rolling, etc.)
 
@@ -47,3 +51,4 @@ MIT
    [cohort-retention-analysis]:https://github.com/bnovarini/sql-analyses/blob/main/cohort-retention-analysis.sql
    [metabase]:https://www.metabase.com/
    [rolling-windows]:https://github.com/bnovarini/sql-analyses/blob/main/rolling-windows.sql
+   [pareto-analysis]:https://github.com/bnovarini/sql-analyses/blob/main/pareto.sql
