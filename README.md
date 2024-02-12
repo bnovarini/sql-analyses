@@ -15,7 +15,7 @@ I've decided to start sharing some SQL queries I've built that have helped me ga
 Create a visual pareto chart of the data, helpful when trying to communicate with stakeholders.
 You can always use approx_quantiles (Standard SQL) or percentile_disc (POSTGRES) to get specific values, but a chart can convey more information in one look (e.g., how fast does the curve increase, when does it reach a saturation point, etc.)
 
-<img width="1253" alt="Screenshot 2024-02-12 at 09 37 13" src="https://github.com/bnovarini/sql-analyses/assets/49925472/1f8fd603-f90d-4d6c-85ac-a661e2c497d8">
+<img width="600" alt="Pareto analysis example" src="https://github.com/bnovarini/sql-analyses/assets/49925472/1f8fd603-f90d-4d6c-85ac-a661e2c497d8">
 
 #### **[rolling-windows][rolling-windows]** (Standard SQL)
 There are always ways to use window functions, but here's another approach to do rolling window analyses (30-day rolling, 7-day rolling, etc.)
@@ -36,7 +36,7 @@ There are Python libraries to do this easily, but for those of us who like our a
 
 Here's an image of what the trendline looks like when running with some [sample data][sample-retention-data] from Profitwell (chart generated in Metabase).
 
-<img width="600" alt="image" src="https://github.com/bnovarini/sql-analyses/assets/49925472/f58162d0-8b7f-4d83-9e15-091aa5af5f8d">
+<img width="600" alt="Retention curve regression example" src="https://github.com/bnovarini/sql-analyses/assets/49925472/f58162d0-8b7f-4d83-9e15-091aa5af5f8d">
 
 #### **More analyses to be shared soon**
 
