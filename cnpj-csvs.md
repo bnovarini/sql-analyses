@@ -30,6 +30,8 @@ FROM xxx
 JOIN xxx
 Etc`
 
+If you want to go the long route and download the data and set up a process behind the updates, I highly suggest checking out [this repo](https://github.com/rictom/cnpj-sqlite)
+
 
 **Hope this helps!**
 
