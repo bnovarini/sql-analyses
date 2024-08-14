@@ -1,16 +1,18 @@
 -- This SQL analysis helps you break down the MRR movements for your SaaS business to calculate your growth accounting metrics
 -- For more information on growth accounting, check out this article: https://tribecap.co/a-quantitative-approach-to-product-market-fit/
 
--- It is assumed you have some table with month, user_id, subscription_revenue
+WITH monthly_subscription AS (
+-- It is assumed you have some table with month, user_id, subscription_revenue    
+),
 
 -- This will help populate dormant months of subscribers (for instance, if they churned for a few months then came back)
-WITH distinct_monthly_subscription_businesses AS (
-    SELECT month, user_id, category
+distinct_monthly_subscription_businesses AS (
+    SELECT month, user_id
     FROM (
         SELECT *
         FROM UNNEST(GENERATE_DATE_ARRAY(DATE_SUB(DATE_TRUNC(CURRENT_DATE(), MONTH), INTERVAL 36 MONTH), CURRENT_DATE(), INTERVAL 1 MONTH)) as month
     ), 
-    (SELECT DISTINCT user_id, category FROM {{monthly-subscription-revenue-per-business-table}})
+    (SELECT DISTINCT user_id FROM {{monthly-subscription-revenue-per-business-table}})
 ),
 
 -- Combine previous tables to get the subscription revenue for each business for each month, also considering dormant months
@@ -23,7 +25,7 @@ populated_monthly_subscription_revenue_per_business AS (
             MIN(s.month) OVER(PARTITION BY user_id) as first_month,
             LAG(subscription_revenue) OVER(PARTITION BY user_id ORDER BY month) as previous_month_sub_revenue
         FROM distinct_monthly_subscription_businesses m
-        LEFT JOIN monthly_subscription s using(month, user_id, category)
+        LEFT JOIN monthly_subscription s using(month, user_id)
     )
     WHERE month >= first_month
 ),
