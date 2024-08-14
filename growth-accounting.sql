@@ -1,7 +1,7 @@
 -- This SQL analysis helps you break down the MRR movements for your SaaS business to calculate your growth accounting metrics
 -- For more information on growth accounting, check out this article: https://tribecap.co/a-quantitative-approach-to-product-market-fit/
 
--- It is assumed you have some table with month, customer_id, subscription_revenue
+-- It is assumed you have some table with month, user_id, subscription_revenue
 
 -- This will help populate dormant months of subscribers (for instance, if they churned for a few months then came back)
 WITH distinct_monthly_subscription_businesses AS (
