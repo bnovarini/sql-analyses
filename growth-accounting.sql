@@ -12,7 +12,7 @@ distinct_monthly_subscription_businesses AS (
         SELECT *
         FROM UNNEST(GENERATE_DATE_ARRAY(DATE_SUB(DATE_TRUNC(CURRENT_DATE(), MONTH), INTERVAL 36 MONTH), CURRENT_DATE(), INTERVAL 1 MONTH)) as month
     ), 
-    (SELECT DISTINCT user_id FROM {{monthly-subscription-revenue-per-business-table}})
+    (SELECT DISTINCT user_id FROM monthly_subscription)
 ),
 
 -- Combine previous tables to get the subscription revenue for each business for each month, also considering dormant months
