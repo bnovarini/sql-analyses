@@ -20,8 +20,11 @@ You can always use approx_quantiles (Standard SQL) or percentile_disc (POSTGRES)
 #### **[rolling-windows][rolling-windows]** (Standard SQL)
 There are always ways to use window functions, but here's another approach to do rolling window analyses (30-day rolling, 7-day rolling, etc.)
 
+#### **[growth-accounting-mrr-movements][growth-accounting-mrr-movements]** (Standard SQL)
+Assuming you already track your subscription revenue (or any activity) with [Metabase][metabase] or an equivalent tool, this script helps you derive the MRR movements of your SaaS business to calculate your growth accounting metrics. For more information on Growth Accounting, please visit [this article][growth-accounting-article].
+
 #### **[cohort-retention-analysis][cohort-retention-analysis]** (Standard SQL)
-Assuming you already track your user revenue (or any activity) with [Metabase][metabase] or and equivalent tool, this script helps you display the data in the format of a retention chart or table.
+Assuming you already track your user revenue (or any activity) with [Metabase][metabase] or an equivalent tool, this script helps you display the data in the format of a retention chart or table.
 
 _If you use Postgres, I **don't** recommend trying to pivot the table like is shown in the end, because there is no shortcut like there is in Standard SQL_
 
@@ -51,6 +54,8 @@ MIT
    [regression-sql]:https://github.com/bnovarini/sql-analyses/blob/main/retention-curve-regression.sql
    [sample-retention-data]:https://demo.profitwell.com/app/trends/cohorts
    [cohort-retention-analysis]:https://github.com/bnovarini/sql-analyses/blob/main/cohort-retention-analysis.sql
+   [growth-accounting-mrr-movements]:https://github.com/bnovarini/sql-analyses/blob/main/growth-accounting.sql
    [metabase]:https://www.metabase.com/
    [rolling-windows]:https://github.com/bnovarini/sql-analyses/blob/main/rolling-windows.sql
    [pareto-analysis]:https://github.com/bnovarini/sql-analyses/blob/main/pareto.sql
+   [growth-accounting-article]:https://tribecap.co/a-quantitative-approach-to-product-market-fit/
