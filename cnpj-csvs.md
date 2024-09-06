@@ -14,7 +14,7 @@ The process of extracting, parsing and uploading CNPJ data for data analyzes can
 
 To save folks from this process of downloading the public data, I've downloaded and parsed the csv with headers here for your convenience.
 
-#### **[Download CNPJ csvs here][csv-data-link]** (latest update March 15th 2024)
+#### **[Download CNPJ csvs here][csv-data-link]** (latest update August 31st 2024)
 
 ## How to use this data with BigQuery
 1. Upload the csvs into Cloud Storage
