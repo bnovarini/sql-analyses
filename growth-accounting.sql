@@ -21,7 +21,6 @@ populated_monthly_subscription_revenue_per_business AS (
     FROM (
         SELECT m.month, s.month as sub_month, user_id,
             CASE WHEN m.month = s.month THEN subscription_revenue ELSE 0 END as subscription_revenue,
-            CASE WHEN m.month = s.month THEN type ELSE null END as type,
             MIN(s.month) OVER(PARTITION BY user_id) as first_month,
             LAG(subscription_revenue) OVER(PARTITION BY user_id ORDER BY month) as previous_month_sub_revenue
         FROM distinct_monthly_subscription_businesses m
